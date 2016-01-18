@@ -1,0 +1,17 @@
+<div>
+    <p>{{ message }}</p>
+      <a href="#login">Login</a>
+      <a href="#register">Register</a>
+    <div>
+        <form>
+            Username: 
+            <input type="text" ng-model="usr.name" required /></br>
+            Password: 
+            <input type="text" ng-model="usr.password" required /></br>
+    
+            <!-- <input type="submit" ng-click="update(usr)" value="Log in" /> -->
+    <button ng-click="update(usr)">Log In</button>
+        </form>  
+
+    </div>
+</div>

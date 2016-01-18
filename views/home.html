@@ -1,0 +1,13 @@
+<div>
+    <p>{{ message }}</p>
+    
+    <div ng-hide="userLoggedIn">
+      <a href="#login">Login</a>
+      <a href="#register">Register</a>
+    </div>
+    
+    <div ng-show="userLoggedIn">
+        <button ng-click="logOut()">Log out</a>
+    </div>
+    
+</div>
