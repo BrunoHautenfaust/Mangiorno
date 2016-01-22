@@ -1,8 +1,20 @@
-myApp.controller('homeController', ['$rootScope', '$scope', function($rootScope, $scope) {
+myApp.controller('homeController', ['$rootScope', '$scope', 'itemsFactory', function($rootScope, $scope, itemsFactory) {
         $scope.currentUser = Parse.User.current();
         $scope.message = 'Home page!';
     
-        console.log($scope.currentUser);
+  
+    itemsFactory.getMessages().then(function(messages) {
+      $scope.recipes = messages;
+    });  
+  
+    
+        if ($scope.currentUser != null) {
+            $rootScope.userLoggedIn = true;
+        }
+  
+        console.log($scope.currentUser.get('username'));
+    
+    console.log($scope.recipes);
     
         $scope.logOut = function() {
         //  console.log('logged out');  
