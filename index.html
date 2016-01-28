@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Mangiorno</title>
       
   </head>
   <body ng-app="myApp">
@@ -12,6 +13,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
       <script src="src/libs/parse-1.6.12.min.js"></script>
       <!-- JS -->
+      
       <script src="src/app.js"></script>
       <script src="src/routing.js"></script>
       <script src="src/itemsFactory.js"></script>
@@ -19,9 +21,14 @@
       <script src="src/controllers/registerController.js"></script>
       <script src="src/controllers/loginController.js"></script>
       
-      <h1>Mangiorno</h1>
-      <div id="main">
-          <div ng-view></div>
+      <div class="mainContainer">
+          <div class="topGradient"></div> 
+          <h1>Mangiorno</h1>
+         <!-- <div id="main"> -->
+          <div ng-view class="ngView"></div>
+        <!-- <div class="bottomGradient"></div> -->
+
+          </div>
       </div>
       
       

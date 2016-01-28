@@ -1,7 +1,6 @@
 myApp.controller('homeController', ['$rootScope', '$scope', 'itemsFactory', function($rootScope, $scope, itemsFactory) {
         $scope.currentUser = Parse.User.current();
         $scope.message = 'Home page!';
-    
   
     itemsFactory.getMessages().then(function(messages) {
       $scope.recipes = messages;
@@ -12,7 +11,7 @@ myApp.controller('homeController', ['$rootScope', '$scope', 'itemsFactory', func
             $rootScope.userLoggedIn = true;
         }
   
-        console.log($scope.currentUser.get('username'));
+       // console.log($scope.currentUser.get('username')); gives error, delete
     
     console.log($scope.recipes);
     
