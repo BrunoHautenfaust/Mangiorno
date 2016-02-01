@@ -1,0 +1,16 @@
+<h3>Register page</h3>
+
+ <form name="regform" novalidate>
+     Username: 
+     <input name="username" type="text" ng-model="usr.name" required ng-minlength="4" />
+     <span ng-show="regform.username.$touched && regform.username.$error.required">Username is required</span>
+     <span ng-show="regform.username.$touched && regform.username.$error.minlength">Minimum 4 characters</span></br>
+     <!-- E-mail: 
+     <input type="email" ng-model="usr.email" /></br> -->
+     Password: 
+     <input name="password" type="text" ng-model="usr.password" required ng-minlength="4" />
+     <span ng-show="regform.password.$touched && regform.password.$error.required">Password is required</span>
+     <span ng-show="regform.password.$touched && regform.password.$error.minlength">Minimum 4 characters</span></br>
+    
+     <input type="submit" ng-click="update(usr)" value="Register" ng-disabled="regform.$invalid" />
+</form>  

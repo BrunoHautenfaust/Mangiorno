@@ -1,0 +1,16 @@
+<div>
+        Welcome, {{currentUser.get('username')}} / Search
+        <input type="text" ng-model="ingredient" />
+    </div>
+
+<ul>
+            <li ng-repeat="rec in recipes | filter:ingredient">
+                <div>
+                    <img ng-src="{{rec.img._url}}" alt="{{rec.name}}" height=100 width=100>
+                    <div>
+                    <p>{{rec.name}}:</p> </br>
+                    {{rec.instructions}} </br>
+                    {{rec.ingredients}}</div>
+                </div>
+            </li>
+        </ul>
