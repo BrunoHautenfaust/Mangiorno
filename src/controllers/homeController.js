@@ -1,3 +1,8 @@
+    logOut = function() {
+          console.log('logged out');  
+            User.logOut();
+        };
+
 myApp.controller('homeController', ['$rootScope', '$scope', function($rootScope, $scope) {
         $scope.currentUser = Parse.User.current();
   /*
@@ -8,11 +13,14 @@ myApp.controller('homeController', ['$rootScope', '$scope', function($rootScope,
         if ($scope.currentUser != null) {
             $rootScope.userLoggedIn = true;
         }
-  
+    
+  /*
         $scope.logOut = function() {
         //  console.log('logged out');  
             User.logOut();
             $rootScope.userLoggedIn = false;
         };
-    
+    */
 }]);
+
+

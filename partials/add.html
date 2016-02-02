@@ -1,0 +1,13 @@
+<form>
+    <span> Add Mandja:</span></br>
+    Name: 
+    <input type="text" ng-model="m.name" required /></br>
+    Instructions: 
+    <input type="text" ng-model="m.instructions"required /></br>
+    Picture: 
+    <input type="file" fileread="m.img" accept="image/*" /></br> 
+    Ingredients: 
+    <input type="text" ng-model="m.ingredients" required /></br>
+    
+    <button ng-click="add(m)">Add</button>
+</form>  

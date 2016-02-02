@@ -1,7 +1,8 @@
+// *** Unused ***
 myApp.factory('itemsFactory', function($q, $timeout){
 
     var recipes = [];
-    
+
     var Recipe = Parse.Object.extend('Recipe');
     var query = new Parse.Query(Recipe);
     query.find({
@@ -20,6 +21,7 @@ myApp.factory('itemsFactory', function($q, $timeout){
                 recipes.push(item);
                 console.log(item);
              }
+            console.log(recipes);
         },
         error: function(error) {
             console.log(error.message);
@@ -29,12 +31,12 @@ myApp.factory('itemsFactory', function($q, $timeout){
       var getMessages = function() {
         var deferred = $q.defer();
         $timeout(function() {
-          deferred.resolve(recipes);
+            deferred.resolve(recipes);
         }, 2000);
-      
+
         return deferred.promise;
-    };
-    
+      };
+
     return {
         getMessages: getMessages
     };

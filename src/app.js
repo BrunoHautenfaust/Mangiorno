@@ -1,7 +1,7 @@
   var myApp = angular.module('myApp', ['ui.router']);
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
-  // For any unmatched url, redirect to /state1
+  // For any unmatched url, redirect to /home
   $urlRouterProvider.otherwise('/home');
 
     $stateProvider
@@ -14,7 +14,11 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         url: '/items',
         templateUrl: 'partials/home.items.html',
         controller: 'itemsController'
-        
+    })
+    .state('add', {
+      url: '/add',
+      templateUrl: 'partials/add.html',
+      controller: 'addController'
     })
     .state('login', {
       url: '/login',
@@ -26,4 +30,22 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'partials/register.html',
       controller: 'registerController'
     })
-});
+})
+.directive("fileread", [function () {
+    return {
+        scope: {
+            fileread: "="
+        },
+        link: function (scope, element, attributes) {
+            element.bind("change", function (changeEvent) {
+                var reader = new FileReader();
+                reader.onload = function (loadEvent) {
+                    scope.$apply(function () {
+                        scope.fileread = loadEvent.target.result;
+                    });
+                }
+                reader.readAsDataURL(changeEvent.target.files[0]);
+            });
+        }
+    }
+}]);
