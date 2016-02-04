@@ -3,6 +3,14 @@ myApp.controller('itemsController', ['$rootScope', '$scope', '$location', functi
  
     console.log('In items controller');
     
+    $scope.setIngredients = function(arr) {
+        var string = '';
+        for (var i=0; i < arr.length; i+=1) {
+            string += arr[i] + (i == arr.length-1 ? ' ' : ', ');
+            }
+        return string;
+    };
+        
     // TEST QUERY
     var recipes = [];
     var Recipe = Parse.Object.extend('Recipe');
@@ -14,7 +22,8 @@ myApp.controller('itemsController', ['$rootScope', '$scope', '$location', functi
                 item.name = results[i].get('name');
                 item.instructions = results[i].get('instructions');
                 item.img = results[i].get('img');
-                item.ingredients = results[i].get('ingredients');
+              //  item.ingredients = results[i].get('ingredients');
+                item.ingredients = $scope.setIngredients(results[i].get('ingredients'));
                 recipes.push(item);
                 console.log(item);
              }

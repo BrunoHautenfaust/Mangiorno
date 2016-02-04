@@ -24,6 +24,7 @@ myApp.controller('addController', ['$rootScope', '$scope', function($rootScope, 
         r.set('ingredients', a);
         r.save().then(function(){
             console.log('recipe created');
+            alert('recipe created');
             }, function(err){
                 alert(err.message);
             });

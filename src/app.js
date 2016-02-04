@@ -13,7 +13,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     .state('home.items',{
         url: '/items',
         templateUrl: 'partials/home.items.html',
-        controller: 'itemsController'
+        controller: 'itemsController',
+      css: 'items'
     })
     .state('add', {
       url: '/add',
@@ -23,12 +24,14 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     .state('login', {
       url: '/login',
       templateUrl: 'partials/login.html',
-      controller: 'loginController'
+      controller: 'loginController',
+      css: 'form'
     })
     .state('register', {
       url: '/register',
       templateUrl: 'partials/register.html',
-      controller: 'registerController'
+      controller: 'registerController',
+      css: 'form'
     })
 })
 .directive("fileread", [function () {

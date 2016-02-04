@@ -1,18 +1,26 @@
-<div>
-    <!--  <button  ng-click="refresh()">BUTTHOLE</button> -->
+<!--  <button  ng-click="refresh()">BUTTHOLE</button> -->
        <!-- Welcome, {{currentUser.get('username')}} -->
-        Search
-        <input type="text" ng-model="ingredient" />
-    </div>
+    Search
+    <input type="text" ng-model="ingredient" />
 
-<ul>
-            <li ng-repeat="rec in recipes | filter:ingredient">
-                <div>
-                    <img ng-src="{{rec.img._url}}" alt="{{rec.name}}" height=100 width=100>
-                    <div>
-                    <p>{{rec.name}}:</p> </br>
-                    {{rec.instructions}} </br>
-                    {{rec.ingredients}}</div>
+    <div id="dots-pattern">
+        <ul>
+            <li id="item" ng-repeat="rec in recipes | filter:ingredient">
+                    <img ng-src="{{rec.img._url}}" alt="{{rec.name}}" >
+                <div class="info">
+               
+          <!--          <p>
+                        {{rec.name}}: </br>
+                        <p>Instructions:</p></br>
+                        {{rec.instructions}} </br>
+                        <span>Ingredients:</span>{{rec.ingredients}}
+                    </p>-->
+
+                    <p class="title">{{rec.name}}:</p></br>
+                    <p class="instr"><span>Instructions:</span></br> {{rec.instructions}}</p> </br>
+                    <p class="ingrd"><span>Ingredients:</span> {{rec.ingredients}}</p> </br> 
+
                 </div>
-            </li>
+            </li> 
         </ul>
+    </div>
