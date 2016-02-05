@@ -15,7 +15,7 @@ input {
 
 #last {
     padding: 5px 15px;
-    background: linear-gradient(#3e4852, #323b44);
+  /*  background: linear-gradient(#3e4852, #323b44);*/
 }
 
 #last:enabled {

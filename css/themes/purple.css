@@ -1,0 +1,25 @@
+body {
+    background-color: #19111c;
+}
+
+.dropdown-content {
+    box-shadow: 0px 1px #5b4f61 inset; 
+    background: -webkit-linear-gradient(#3c3041, #19111c);
+}
+
+.top {
+    box-shadow: 0px 1px #5b4f61 inset; 
+    background: -webkit-linear-gradient(#3c3041, #19111c);
+}
+
+.topGradient {
+    background: #3c3041; /* Old browsers */
+    background: -moz-radial-gradient(center top, ellipse cover,  #3c3041 0%, #19111c 60%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center top, ellipse cover,  #3c3041 0%,#19111c 60%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center top,  #3c3041 0%,#19111c 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3041', endColorstr='#19111c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#last {
+    background: linear-gradient(#3c3041, #19111c);
+}
