@@ -1,12 +1,15 @@
 <!--  <button  ng-click="refresh()">BUTTHOLE</button> -->
        <!-- Welcome, {{currentUser.get('username')}} -->
+
     Search
     <input type="text" ng-model="ingredient" />
-
+    
     <div id="dots-pattern">
+        
         <ul>
             <li id="item" ng-repeat="rec in recipes | filter:ingredient">
-                    <img ng-src="{{rec.img._url}}" alt="{{rec.name}}" >
+                <img class="imageSmall" ng-src="{{rec.img._url}}" ng-click="handleClick(this)" alt="{{rec.name}}" >
+                
                 <div class="info">
                
           <!--          <p>
@@ -14,7 +17,8 @@
                         <p>Instructions:</p></br>
                         {{rec.instructions}} </br>
                         <span>Ingredients:</span>{{rec.ingredients}}
-                    </p>-->
+                    </p>
+        -->
 
                     <p class="title">{{rec.name}}:</p></br>
                     <p class="instr"><span>Instructions:</span></br> {{rec.instructions}}</p> </br>

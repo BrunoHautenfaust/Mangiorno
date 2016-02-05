@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+      <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/forms.css">
       <link rel="stylesheet" type="text/css" href="css/items.css">
     <title>Mangiorno</title>
@@ -18,6 +19,8 @@
        <script src="src/libs/ng-file-upload.js"></script>
       <!-- JS -->
       <script src="src/app.js"></script>
+      <script src="src/imageDirective.js"></script>
+      <script src="src/imageService.js"></script>
      <!-- <script src="src/itemsFactory.js"></script> -->
       <script src="src/controllers/homeController.js"></script>
       <script src="src/controllers/loginController.js"></script>
@@ -29,7 +32,16 @@
       <div class="topGradient"></div>
     <nav class="top">
         <a ui-sref="home">Home</a>
-        <a ui-sref="themes">Themes</a>
+        
+        <a id="themes" ui-sref="themes">Themes
+            <div class="dropdown-content">
+            <a href="#">Black</a>
+            <a href="#">Green</a>
+            <a href="#">Purple</a>
+            <a href="#">Red</a>
+            </div>
+        </a>
+        
         <a ui-sref="login" ng-hide="userLoggedIn">Login</a>
         <a ui-sref="register" ng-hide="userLoggedIn">Register</a>
         <a ui-sref="add" ng-show="userLoggedIn">Add</a>

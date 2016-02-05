@@ -8,7 +8,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/home',
       templateUrl: 'partials/home.html',
-      controller: 'homeController'
+      controller: 'homeController',
+      css: 'home'
     })
     .state('home.items',{
         url: '/items',
@@ -33,22 +34,4 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       controller: 'registerController',
       css: 'form'
     })
-})
-.directive("fileread", [function () {
-    return {
-        scope: {
-            fileread: "="
-        },
-        link: function (scope, element, attributes) {
-            element.bind("change", function (changeEvent) {
-                var reader = new FileReader();
-                reader.onload = function (loadEvent) {
-                    scope.$apply(function () {
-                        scope.fileread = loadEvent.target.result;
-                    });
-                }
-                reader.readAsDataURL(changeEvent.target.files[0]);
-            });
-        }
-    }
-}]);
+});

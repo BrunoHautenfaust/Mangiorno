@@ -1,8 +1,19 @@
-myApp.controller('itemsController', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
-		//$scope.message = 'Login page!';
- 
-    console.log('In items controller');
+myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'ImageService', function($rootScope, $scope, $location, imageService) {
     
+    $scope.handleClick = function(data) {
+        imageService.prepForBroadcast(data);
+    };
+        
+    $scope.$on('handleBroadcast', function() {
+       $rootScope.image = imageService.image;
+        $rootScope.imageClicked = true;
+        
+    });  
+    
+    
+		//$scope.message = 'Login page!';
+    console.log('In items controller');
+   
     $scope.setIngredients = function(arr) {
         var string = '';
         for (var i=0; i < arr.length; i+=1) {
