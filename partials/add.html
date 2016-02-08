@@ -5,9 +5,9 @@
     Instructions: 
     <input type="text" ng-model="m.instructions"required /></br>
     Picture: 
-    <input type="file" fileread="m.img" accept="image/*" /></br> 
+<input class="fileInput" id="file" type="file" fileread="m.img" accept="image/*" value="SJ" /><div class="labelBox" id="last"><label for="file">Select file</label></div></br>
     Ingredients: 
     <input type="text" ng-model="m.ingredients" required /></br>
     
-    <button ng-click="add(m)">Add</button>
+    <input type="submit" id="last" ng-click="add(m)" value="Add" />
 </form>  

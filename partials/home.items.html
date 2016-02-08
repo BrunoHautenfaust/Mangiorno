@@ -1,6 +1,3 @@
-<!--  <button  ng-click="refresh()">BUTTHOLE</button> -->
-       <!-- Welcome, {{currentUser.get('username')}} -->
-
     Search
     <input type="text" ng-model="ingredient" />
     
@@ -8,11 +5,10 @@
         
         <ul>
             <li id="item" ng-repeat="rec in recipes | filter:ingredient">
+                <a ui-sref="itemDetails({itemId: rec.id})" ng-click="getItem(this)" class="title">{{rec.name}}:</a></br>
                 <img class="imageSmall" ng-src="{{rec.img._url}}" ng-click="handleClick(this)" alt="{{rec.name}}" >
                 
                 <div class="info">
-                    <a ui-sref="itemDetails({itemId: rec.id})" ng-click="getItem(this)" class="title">{{rec.name}}:</a></br>
-                <p>{{rec.id}}</p>
                     <p class="instr"><span>Instructions:</span></br> {{rec.instructions}}</p> </br>
                     <p class="ingrd"><span>Ingredients:</span> {{rec.ingredients}}</p> </br> 
 

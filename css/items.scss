@@ -17,8 +17,9 @@
     }
     
     #item {
-        height: 250px;
+        height: 260px;
         width: 70%;
+        min-width: 250px;
         margin-bottom: 20px;
         background-color: white;
         border: 1px solid gray;
@@ -47,18 +48,24 @@
         width: 45em;
     }
     
-    .info {
-        position: absolute;
-        margin-left: 20%;
-         
-        .title, .instr, .ingrd {
+     .title {
+            font-size: 20px;
+            margin-left: 40%;
+            border: 1px solid red;
+     }
+    
+     .title, .instr, .ingrd {
             color: black;
             font: 12px #838383 droidSans;
             text-shadow: 1px 1px white;
-        }
-        .title {
-            font-size: 20px;
-        }
+            text-align: center;
+         border: 2px solid green;
+
+     }
+    .info {
+        position: relative;
+        margin-left: 40%;
+        min-width: 200px; 
     }
     
 }

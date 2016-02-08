@@ -15,10 +15,26 @@ input {
 
 #last {
     padding: 5px 15px;
-  /*  background: linear-gradient(#3e4852, #323b44);*/
 }
 
 #last:enabled {
     color: white;
+    text-shadow: 1px 1px black;
+}
+
+.fileInput {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+    position: absolute;
+	z-index: -1;
+}
+
+.labelBox {
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+    font: 16px Colaborate-Thin;
     text-shadow: 1px 1px black;
 }

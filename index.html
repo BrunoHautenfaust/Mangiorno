@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-  <!--  <link rel="stylesheet" type="text/css" href="css/black.css" id="black"> -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="css/themes/default.css" id="theme"> 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
@@ -17,6 +17,7 @@
       <!-- Libs -->
       <!-- <script src="src/libs/angular.min.js"></script> -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
       <script src="src/libs/parse-1.6.12.min.js"></script>
        <script src="src/libs/ng-file-upload.js"></script>
@@ -39,7 +40,7 @@
     <nav class="top">
         <a ui-sref="home">Home</a>
         
-        <a id="themes" ui-sref="themes">Themes
+        <a id="themes">Themes
             <div class="dropdown-content">
             <a href="#" onclick="changeTheme(this)">Default</a>
             <a href="#" onclick="changeTheme(this)">Black</a>

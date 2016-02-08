@@ -14,8 +14,9 @@
   #dots-pattern ul {
     list-style-type: none; }
   #dots-pattern #item {
-    height: 250px;
+    height: 260px;
     width: 70%;
+    min-width: 250px;
     margin-bottom: 20px;
     background-color: white;
     border: 1px solid gray;
@@ -36,14 +37,19 @@
     position: fixed;
     border: 2px solid green;
     width: 45em; }
+  #dots-pattern .title {
+    font-size: 20px;
+    margin-left: 40%;
+    border: 1px solid red; }
+  #dots-pattern .title, #dots-pattern .instr, #dots-pattern .ingrd {
+    color: black;
+    font: 12px #838383 droidSans;
+    text-shadow: 1px 1px white;
+    text-align: center;
+    border: 2px solid green; }
   #dots-pattern .info {
-    position: absolute;
-    margin-left: 20%; }
-    #dots-pattern .info .title, #dots-pattern .info .instr, #dots-pattern .info .ingrd {
-      color: black;
-      font: 12px #838383 droidSans;
-      text-shadow: 1px 1px white; }
-    #dots-pattern .info .title {
-      font-size: 20px; }
+    position: relative;
+    margin-left: 40%;
+    min-width: 200px; }
 
 /*# sourceMappingURL=items.css.map */
