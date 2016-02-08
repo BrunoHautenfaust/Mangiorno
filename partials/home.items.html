@@ -11,16 +11,8 @@
                 <img class="imageSmall" ng-src="{{rec.img._url}}" ng-click="handleClick(this)" alt="{{rec.name}}" >
                 
                 <div class="info">
-               
-          <!--          <p>
-                        {{rec.name}}: </br>
-                        <p>Instructions:</p></br>
-                        {{rec.instructions}} </br>
-                        <span>Ingredients:</span>{{rec.ingredients}}
-                    </p>
-        -->
-
-                    <p class="title">{{rec.name}}:</p></br>
+                    <a ui-sref="itemDetails({itemId: rec.id})" ng-click="getItem(this)" class="title">{{rec.name}}:</a></br>
+                <p>{{rec.id}}</p>
                     <p class="instr"><span>Instructions:</span></br> {{rec.instructions}}</p> </br>
                     <p class="ingrd"><span>Ingredients:</span> {{rec.ingredients}}</p> </br> 
 

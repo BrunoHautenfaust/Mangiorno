@@ -1,0 +1,13 @@
+<div class="itemDetails" id="dots-pattern">
+    <h3>{{item.name}}</h3>
+    <img ng-click="handleClick(this)" ng-src="{{item.img}}" alt="{{item.name}}" >
+    <div class="right">
+        <p>Ingredients: {{item.ingredients}}</p>
+        <p>Instructions:<br> {{item.instructions}}</p>
+    </div>
+</div>
+
+
+<div class="thumb" ng-show="imageClicked" >
+    <img ng-src="{{image}}" ng-click="hide()" width=70% height=70%>
+</div>

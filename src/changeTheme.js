@@ -3,4 +3,6 @@ var changeTheme = function(el) {
     // console.log(el.innerHTML);
     // console.log(color);
     document.getElementById('theme').href='css/themes/'+color+'.css';
+    
+  //  console.log(window.location.href);
 };

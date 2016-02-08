@@ -11,12 +11,18 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       controller: 'homeController',
       css: 'home'
     })
-    .state('home.items',{
-        url: '/items',
-        templateUrl: 'partials/home.items.html',
-        controller: 'itemsController',
-      css: 'items'
-    })
+        .state('home.items',{
+            url: '/items',
+            templateUrl: 'partials/home.items.html',
+            controller: 'itemsController',
+            css: 'items'
+        })
+               .state('itemDetails',{
+                  url: '/home/items/:itemId',
+                  templateUrl: 'partials/itemDetails.html',
+                  controller: 'itemDetailsController',
+                  css: 'itemDetails'
+                })
     .state('add', {
       url: '/add',
       templateUrl: 'partials/add.html',

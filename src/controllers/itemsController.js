@@ -1,11 +1,11 @@
-myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'ImageService', function($rootScope, $scope, $location, imageService) {
+myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'ImageService', 'ItemService', function($rootScope, $scope, $location, imageService, ItemService) {
     
     $scope.handleClick = function(data) {
         imageService.prepForBroadcast(data);
     };
         
     $scope.$on('handleBroadcast', function() {
-       $rootScope.image = imageService.image;
+        $rootScope.image = imageService.image;
         $rootScope.imageClicked = true;
         
     });  
@@ -30,6 +30,7 @@ myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'Image
         success: function(results) {
             for(var i=0; i < results.length; i+=1) {
                 var item = {};
+                item.id = i;
                 item.name = results[i].get('name');
                 item.instructions = results[i].get('instructions');
                 item.img = results[i].get('img');
@@ -46,6 +47,11 @@ myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'Image
           }
         });
     
+    
+    $scope.getItem = function(el) {
+      ItemService.item = el;
+       // console.log(getItemService.itemGetter);
+    };
     /*
     var getMessages = function() {
         var deferred = $q.defer();
