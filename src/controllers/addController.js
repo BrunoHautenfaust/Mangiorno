@@ -1,6 +1,12 @@
-myApp.controller('addController', ['$rootScope', '$scope', function($rootScope, $scope) {
-        var Recipe = Parse.Object.extend('Recipe');
+myApp.controller('addController', ['$state','$rootScope', '$scope', function($state, $rootScope, $scope, message) {
+     
+    var relocate = function() {
+        if (!$rootScope.userLoggedIn) {
+            $state.go('home');
+        }
+     };
     
+    var Recipe = Parse.Object.extend('Recipe');
     
     $scope.MakeArray = function(text) {
         text = text.split(' ');
@@ -11,9 +17,19 @@ myApp.controller('addController', ['$rootScope', '$scope', function($rootScope, 
         return arr;
     };
     
-    $scope.add = function(m)
-    {
+    var checkRecipe = function(obj) {
+        if ((obj.name != undefined || obj.name != '')
+            && (obj.instructions != undefined || obj.instructions != '')) {
+            $scope.added = true;
+            return true;
+        } else {
+            return false;
+        }
+    };
+    
+    $scope.add = function(m) {
         var r = new Recipe();
+              //  console.log(check(r));
         r.set('name', m.name);
         r.set('instructions', m.instructions);
         var f = new Parse.File(m.name, { base64: m.img });
@@ -22,12 +38,15 @@ myApp.controller('addController', ['$rootScope', '$scope', function($rootScope, 
         r.set('img', f);
         var a = $scope.MakeArray(m.ingredients);
         r.set('ingredients', a);
+        checkRecipe(r);
         r.save().then(function(){
-            console.log('recipe created');
+            $scope.added = false;
+            $scope.$apply();
             alert('recipe created');
             }, function(err){
                 alert(err.message);
             });
     }
+    relocate();
 }]);
 

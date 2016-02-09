@@ -27,7 +27,6 @@
       <script src="src/imageDirective.js"></script>
       <script src="src/imageService.js"></script>
       <script src="src/itemService.js"></script>
-     <!-- <script src="src/itemsFactory.js"></script> -->
       <script src="src/controllers/homeController.js"></script>
       <script src="src/controllers/loginController.js"></script>
       <script src="src/controllers/registerController.js"></script>
@@ -39,7 +38,6 @@
       <div class="topGradient"></div>
     <nav class="top">
         <a ui-sref="home">Home</a>
-        
         <a id="themes">Themes
             <div class="dropdown-content">
             <a href="#" onclick="changeTheme(this)">Default</a>
@@ -49,11 +47,10 @@
             <a href="#" onclick="changeTheme(this)">Red</a>
             </div>
         </a>
-        
         <a ui-sref="login" ng-hide="userLoggedIn">Login</a>
         <a ui-sref="register" ng-hide="userLoggedIn">Register</a>
         <a ui-sref="add" ng-show="userLoggedIn">Add</a>
-        <a href="." onclick="logOut()" ng-show="userLoggedIn">Logout</a> <!-- doesn't work: logOut is undefined outside scope -->
+        <a href="." onclick="logOut()" ng-show="userLoggedIn">Logout</a>
     </nav>
       
           <div ui-view></div>

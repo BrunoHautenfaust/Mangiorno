@@ -1,6 +1,7 @@
-    logOut = function() {
+logOut = function() {
           console.log('logged out');  
-            User.logOut();
+          User.logOut();
+          location.reload();
         };
 
 myApp.controller('homeController', ['$rootScope', '$scope', function($rootScope, $scope) {
@@ -14,7 +15,6 @@ myApp.controller('homeController', ['$rootScope', '$scope', function($rootScope,
     $scope.hide = function() {
            $rootScope.imageClicked = false;
     };
-  
 }]);
 
 

@@ -8,6 +8,6 @@
 <input class="fileInput" id="file" type="file" fileread="m.img" accept="image/*" value="SJ" /><div class="labelBox" id="last"><label for="file">Select file</label></div></br>
     Ingredients: 
     <input type="text" ng-model="m.ingredients" required /></br>
-    
-    <input type="submit" id="last" ng-click="add(m)" value="Add" />
+<input type="submit" id="last" ng-click="add(m)" value="Add" /></br>
+    <img class="pizza" ng-if="added" src="../css/pizza_spin.gif" width=30 height=30/>
 </form>  

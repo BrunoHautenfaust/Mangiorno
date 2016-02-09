@@ -4,7 +4,7 @@
     <div id="dots-pattern">
         
         <ul>
-            <li id="item" ng-repeat="rec in recipes | filter:ingredient">
+            <li id="item" ng-repeat="rec in recipes | filter:ingredient | limitTo: limit as results">
                 <a ui-sref="itemDetails({itemId: rec.id})" ng-click="getItem(this)" class="title">{{rec.name}}:</a></br>
                 <img class="imageSmall" ng-src="{{rec.img._url}}" ng-click="handleClick(this)" alt="{{rec.name}}" >
                 
@@ -15,4 +15,5 @@
                 </div>
             </li> 
         </ul>
+<button ng-hide="results.length === recipes.length" ng-click="limit = limit +5">show more...</button>
     </div>
