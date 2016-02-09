@@ -6,7 +6,7 @@ form {
     font: 16px Colaborate-Thin;
 }
 
-input {
+input, textarea {
     margin-top: 10px;
     padding-left: 5px;
     border-radius: 5px;

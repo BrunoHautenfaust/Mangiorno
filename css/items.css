@@ -20,7 +20,8 @@
     margin-bottom: 20px;
     background-color: white;
     border: 1px solid gray;
-    border-radius: 12px; }
+    border-radius: 12px;
+    text-align: center; }
   #dots-pattern .imageSmall {
     float: left;
     width: 200px;
@@ -38,9 +39,7 @@
     border: 2px solid green;
     width: 45em; }
   #dots-pattern .title {
-    font-size: 20px;
-    margin-left: 40%;
-    border: 1px solid red; }
+    font-size: 20px; }
   #dots-pattern .title, #dots-pattern .instr, #dots-pattern .ingrd {
     color: black;
     font: 12px #838383 droidSans;
@@ -51,5 +50,15 @@
     position: relative;
     margin-left: 40%;
     min-width: 200px; }
+
+@media screen and (max-width: 650px) {
+  body {
+    background: red; }
+
+  .info {
+    display: none; } }
+@media screen and (max-width: 500px) {
+  #item {
+    margin-left: -60px; } }
 
 /*# sourceMappingURL=items.css.map */
