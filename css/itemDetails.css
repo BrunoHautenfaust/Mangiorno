@@ -9,14 +9,16 @@
   background-image: url("bg.jpg");
   left: 0;
   right: 0;
+    
   background-repeat: repeat;
   z-index: -1;
 }
 
 #dots-pattern h3 {
+    margin-left: -20%;
     text-align: center;
     font-size: 2em;
-    margin-left: -8em;
+    /*margin-left: -8em;*/
 }
 
 #dots-pattern img {
@@ -29,7 +31,18 @@
 }
 
 #dots-pattern .right {
-    border: 5px solid red;
-    margin-left: 22%;
+     overflow:hidden;
+   /* border: 5px solid red;*/
+    margin-top: -2%;
+  /*  margin-left: 22%;*/
     margin-right: 25%;
+    padding-left: 10px;
+}
+
+.right p {
+    font-size: 18px;
+}
+
+.right span {
+    font-weight: bold;
 }
