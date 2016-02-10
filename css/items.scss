@@ -17,7 +17,7 @@
     }
     
     #item {
-        height: 260px;
+        height: 270px;
         width: 70%;
         min-width: 250px;
         margin-bottom: 20px;
@@ -31,7 +31,7 @@
         float: left;
         width: 200px;
         height: 200px;
-        margin: 20px 0 0 20px;
+        margin: 10px 0 0 20px;
         border: 5px solid white;
         outline: #dadada solid 1px;
     }
@@ -62,28 +62,86 @@
          border: 2px solid green;
 
      }
+   
     .info {
-        position: relative;
-        margin-left: 40%;
-        min-width: 200px; 
+        margin: 10px auto auto auto;
+        left: 250px;
+        width: 60%;
+        min-width: 30%;
+        margin-right: 10px;
+        height: 200px;
+       // border: 2px solid blue;
+        
+        p {
+          overflow: hidden;
+          max-width: 95%;   
+          font-size: 18px;
+        }
+        
+        .instr {
+           // height: 90px;
+        }
+        
+        .ingrd {
+          //  margin-top: -10px;
+          //  height: 55px;
+        }
+        
+        span {
+            font-weight: bold;
+           // position: absolute;
+           // left:0;
+        }
     }
-    
 }
 
-@media screen and (max-width: 650px) {
-    body {
-        background: red;
-    }
+button {
+    position: absolute;
+    left: 45%;
+}
+
+@media screen and (max-width: 640px) {
       .info {
        display: none;
       }
-    
 }
 
 @media screen and (max-width: 500px) {
-   
       #item {
          margin-left: -60px;
       }   
-   
+}
+
+/*
+mixin for multiline
+source: 
+http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/
+*/
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount; 
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
+
+#multiline {
+  @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: white);  
 }
