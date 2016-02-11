@@ -23,3 +23,7 @@ body {
 #last {
     background: linear-gradient(#303942, #11161c);
 }
+
+#last:hover {
+    background: linear-gradient(#11161c, #303942);
+}

@@ -66,3 +66,12 @@ body {
     display: inline-block;
     margin-left: 10px;
 }
+
+.scrollup {
+    position: fixed;
+    border-radius: 5px;
+    bottom: 0;
+    right: 5%;
+    display: none;
+    text-decoration: none;
+ }
