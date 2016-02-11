@@ -9,7 +9,6 @@
   background-image: url("bg.jpg");
   left: 0;
   right: 0;
-    
   background-repeat: repeat;
   z-index: -1;
 }
@@ -18,23 +17,22 @@
     margin-left: -20%;
     text-align: center;
     font-size: 2em;
-    /*margin-left: -8em;*/
+    font-style: italic;
 }
 
 #dots-pattern img {
     float: left;
     width: 200px;
     height: 200px;
-   margin-top: -20px;
+    margin-top: -20px;
     border: 5px solid white;
     outline: #dadada solid 1px;
+    cursor: pointer;
 }
 
 #dots-pattern .right {
-     overflow:hidden;
-   /* border: 5px solid red;*/
+    overflow:hidden;
     margin-top: -2%;
-  /*  margin-left: 22%;*/
     margin-right: 25%;
     padding-left: 10px;
 }
