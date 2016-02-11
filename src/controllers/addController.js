@@ -7,9 +7,9 @@ myApp.controller('addController', ['$state','$rootScope', '$scope', function($st
      };
     
     var Recipe = Parse.Object.extend('Recipe');
-    
+   
     $scope.MakeArray = function(text) {
-        text = text.split(' ');
+        text = text.split(',');
         var arr = [];
         for (var i=0; i< text.length; i+=1) {
             arr.push(text[i]);
@@ -33,8 +33,11 @@ myApp.controller('addController', ['$state','$rootScope', '$scope', function($st
         r.set('name', m.name);
         r.set('instructions', m.instructions);
         var f = new Parse.File(m.name, { base64: m.img });
-        //  console.log(f);
-        // console.log(f._source.base64);
+        if (f._source.base64 == undefined) {
+            console.log('NOT SEXY');
+        }
+       // console.log(f);
+       //  console.log(f._source.base64);
         r.set('img', f);
         var a = $scope.MakeArray(m.ingredients);
         r.set('ingredients', a);
