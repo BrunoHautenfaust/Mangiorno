@@ -51,19 +51,18 @@
     }
     
      .title {
+            color: #5e5e5e;
             font-size: 20px;
             text-decoration: none;
-            font-style: italic;
-            font-weight: bold;
+         font-weight: 600;
      }
     .title:hover {
             text-decoration: underline;
      }
     
-     .title, .instr, .ingrd {
-            color: black;
-            font: 12px #838383 droidSans;
-            text-shadow: 1px 1px white;
+     .instr, .ingrd {
+            color: #5e5e5e;
+            font: 12px #5e5e5e droidSans;
             text-align: center;
      }
    
@@ -74,6 +73,7 @@
         min-width: 30%;
         margin-right: 10px;
         height: 200px;
+
         
         p {
           overflow: hidden;

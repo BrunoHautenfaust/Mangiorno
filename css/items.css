@@ -40,16 +40,15 @@
     border: 2px solid green;
     width: 45em; }
   #dots-pattern .title {
+    color: #5e5e5e;
     font-size: 20px;
     text-decoration: none;
-    font-style: italic;
-    font-weight: bold; }
+    font-weight: 600; }
   #dots-pattern .title:hover {
     text-decoration: underline; }
-  #dots-pattern .title, #dots-pattern .instr, #dots-pattern .ingrd {
-    color: black;
-    font: 12px #838383 droidSans;
-    text-shadow: 1px 1px white;
+  #dots-pattern .instr, #dots-pattern .ingrd {
+    color: #5e5e5e;
+    font: 12px #5e5e5e droidSans;
     text-align: center; }
   #dots-pattern .info {
     margin: 10px auto auto auto;
