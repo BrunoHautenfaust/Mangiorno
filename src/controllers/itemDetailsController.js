@@ -15,7 +15,6 @@ myApp.controller('itemDetailsController', ['$scope', 'ItemService', function($sc
     
     $scope.handleClick = function(data) {
         $scope.imageClicked = true;
-        console.log(data);
         $scope.image = data.item.img;
     };
     

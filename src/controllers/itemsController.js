@@ -13,9 +13,6 @@ myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'Image
     });  
     
     
-		//$scope.message = 'Login page!';
-    console.log('In items controller');
-   
     $scope.setIngredients = function(arr) {
         var string = '';
         for (var i=0; i < arr.length; i+=1) {
@@ -24,7 +21,6 @@ myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'Image
         return string;
     };
         
-    // TEST QUERY
     var recipes = [];
     var Recipe = Parse.Object.extend('Recipe');
     var query = new Parse.Query(Recipe);
@@ -36,42 +32,21 @@ myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'Image
                 item.name = results[i].get('name');
                 item.instructions = results[i].get('instructions');
                 item.img = results[i].get('img');
-              //  item.ingredients = results[i].get('ingredients');
                 item.ingredients = $scope.setIngredients(results[i].get('ingredients'));
                 recipes.push(item);
-                console.log(item);
+                // console.log(item);
              }
             $scope.recipes = recipes;
             $scope.$apply();
         },
         error: function(error) {
-            console.log(error.message);
+            alert(error.message);
           }
         });
     
     
     $scope.getItem = function(el) {
       ItemService.item = el;
-       // console.log(getItemService.itemGetter);
     };
-    /*
-    var getMessages = function() {
-        var deferred = $q.defer();
-        $timeout(function() {
-          deferred.resolve(recipes);
-        }, 2000);
-        
-        // console.log(typeof recipes); // object
-        return deferred.promise;
-    };
-    $scope.recipes = getMessages();
-    */
-    
-   /*
-  itemsFactory.getMessages().then(function(messages) {
-          $scope.recipes = messages;
-      console.log('Im in!'); // works every time          >>>  Update recipes through addController
-  });  
-  */
 
 }]);

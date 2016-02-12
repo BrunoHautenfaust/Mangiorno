@@ -4,6 +4,5 @@ var changeTheme = function(el) {
     document.getElementById('theme').href='css/themes/'+color+'.css';
     history.pushState({}, '', currentURL);
     window.history.back();
-    console.log(currentURL);
 };
 

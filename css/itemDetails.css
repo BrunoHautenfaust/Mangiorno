@@ -6,7 +6,7 @@
   position: absolute;
   padding-left: 20%;
   color: black;
-  background-image: url("bg.jpg");
+  background-image: url("../res/bg.jpg");
   left: 0;
   right: 0;
   background-repeat: repeat;
