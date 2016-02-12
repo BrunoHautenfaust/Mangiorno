@@ -1,5 +1,4 @@
 logOut = function() {
-          console.log('logged out');  
           User.logOut();
           location.reload();
         };

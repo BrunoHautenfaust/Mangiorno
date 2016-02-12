@@ -1,6 +1,6 @@
 myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'ImageService', 'ItemService', function($rootScope, $scope, $location, imageService, ItemService) {
     
-    $scope.limit = 2;
+    $scope.limit = 5;
     
     $scope.handleClick = function(data) {
         imageService.prepForBroadcast(data);
