@@ -45,11 +45,13 @@ myApp.controller('addController', ['$state','$rootScope', '$scope', '$timeout', 
         var a = MakeArray(m.ingredients);
         r.set('ingredients', a);
         checkRecipe(r);
+        /*
         console.log(r.get('name'));
         console.log(typeof(r.get('name')));
         console.log(r.get('instructions'));
         console.log(typeof(r.get('instructions')));
         console.log(r.get('ingredients'));
+        */
         
         r.save().then(function(){
         $scope.added = false;
