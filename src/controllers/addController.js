@@ -44,8 +44,8 @@ myApp.controller('addController', ['$state','$rootScope', '$scope', function($st
         checkRecipe(r);
         r.save().then(function(){
         $scope.added = false;
+        $scope.successMessage = true;
         $scope.$apply();
-        alert('recipe created');
         }, function(err){
             alert(err.message);
         });

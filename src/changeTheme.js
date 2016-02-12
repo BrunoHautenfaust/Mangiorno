@@ -1,8 +1,9 @@
 var changeTheme = function(el) {
+    currentURL = window.location.href;
     var color = el.innerHTML.toLowerCase();
-    // console.log(el.innerHTML);
-    // console.log(color);
     document.getElementById('theme').href='css/themes/'+color+'.css';
-    
-  //  console.log(window.location.href);
+    history.pushState({}, '', currentURL);
+    window.history.back();
+    console.log(currentURL);
 };
+

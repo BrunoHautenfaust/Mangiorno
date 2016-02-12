@@ -16,5 +16,3 @@ myApp.controller('homeController', ['$rootScope', '$scope', function($rootScope,
            $rootScope.imageClicked = false;
     };
 }]);
-
-

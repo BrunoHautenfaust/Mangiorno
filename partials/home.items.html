@@ -1,10 +1,10 @@
     Search
-    <input type="text" ng-model="ingredient" />
+    <input type="text" ng-model="search" />
     
     <div id="dots-pattern">
         
         <ul>
-            <li id="item" ng-repeat="rec in recipes | filter:{ingredients: ingredient} | limitTo: limit as results">
+            <li id="item" ng-repeat="rec in recipes | filter:{ingredients: search} | limitTo: limit as results">
                 <a ui-sref="itemDetails({itemId: rec.id})" ng-click="getItem(this)" class="title">{{rec.name}}</a></br>
                 <img class="imageSmall" ng-src="{{rec.img._url}}" ng-click="handleClick(this)" alt="{{rec.name}}" >
           

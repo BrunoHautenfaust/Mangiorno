@@ -42,3 +42,11 @@ input, textarea {
     font: 16px Colaborate-Thin;
     text-shadow: 1px 1px black;
 }
+
+.recipeAdded {
+    display: inline;
+    color: greenyellow;
+    font: 20px Colaborate-Thin;
+   /* border: 2px solid green;*/
+  /*  border-radius: 5px;*/
+}
