@@ -40,4 +40,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       controller: 'registerController',
       css: 'form'
     })
+}).factory('ItemService', function(){
+   var item = {};
+    
+   return item;
 });
