@@ -21,13 +21,13 @@
       <script src="src/libs/ng-file-upload.js"></script>
       <script src="src/libs/jquery-1.12.0.min.js"></script>
       <!-- JS -->
+      <script src="src/fb.js"></script>
       <script src="src/emptyDishImg.js"></script>
       <script src="src/scrolling.js"></script>
       <script src="src/changeTheme.js"></script>
       <script src="src/app.js"></script>
       <script src="src/imageDirective.js"></script>
       <script src="src/imageService.js"></script>
-    <!--  <script src="src/itemService.js"></script> -->
       <script src="src/controllers/homeController.js"></script>
       <script src="src/controllers/loginController.js"></script>
       <script src="src/controllers/registerController.js"></script>
@@ -52,6 +52,7 @@
         <a ui-sref="register" ng-hide="userLoggedIn">Register</a>
         <a ui-sref="add" ng-show="userLoggedIn">Add</a>
         <a href="." onclick="logOut()" ng-show="userLoggedIn">Logout</a>
+        <div class="fb-share-button" data-href="https://rawgit.com/BrunoHautenfaust/Mangiorno/UI-Router_version/index.html#/home" data-layout="icon"></div>
     </nav>
       
           <div ui-view></div>

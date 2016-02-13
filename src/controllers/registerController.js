@@ -4,10 +4,8 @@ var User = Parse.User;
 
 myApp.controller('registerController', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
         $scope.update = function(usr) {
-          
-        User.signUp(usr.name, usr.password)
+        User.signUp(usr.name, usr.password, {email: usr.email})
         .then(function(){
-            console.log('user registered');
             $rootScope.userLoggedIn = true;
             $location.path('/home');
             $rootScope.$apply();

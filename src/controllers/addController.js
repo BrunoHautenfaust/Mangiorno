@@ -44,6 +44,7 @@ myApp.controller('addController', ['$state','$rootScope', '$scope', '$timeout', 
         r.set('img', f);
         var a = MakeArray(m.ingredients);
         r.set('ingredients', a);
+        
         checkRecipe(r);
         /*
         console.log(r.get('name'));
