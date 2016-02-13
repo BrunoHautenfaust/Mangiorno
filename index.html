@@ -52,10 +52,11 @@
         <a ui-sref="register" ng-hide="userLoggedIn">Register</a>
         <a ui-sref="add" ng-show="userLoggedIn">Add</a>
         <a href="." onclick="logOut()" ng-show="userLoggedIn">Logout</a>
-        <div class="fb-share-button" data-href="https://rawgit.com/BrunoHautenfaust/Mangiorno/UI-Router_version/index.html#/home" data-layout="icon"></div>
+        <div id="fb" class="fb-share-button" data-href="https://rawgit.com/BrunoHautenfaust/Mangiorno/UI-Router_version/index.html#/home" data-layout="icon"></div>
     </nav>
       
           <div ui-view></div>
+
 
       <a id="last" href="#" class="scrollup">Top</a>
   </body>
