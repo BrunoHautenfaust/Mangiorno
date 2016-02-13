@@ -7,6 +7,7 @@ This is a SPA application on which you can look at, search for and add recipes.
 - AngularJS
 - jQuery
 - Parse
+- Facebook Social Plugin
 
 #### Project Requirements and Design:
 https://github.com/TelerikAcademy/Slice-and-Dice/tree/master/Course-Project
