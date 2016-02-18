@@ -9,7 +9,6 @@ myApp.controller('itemsController', ['$rootScope', '$scope', '$location', 'Image
     $scope.$on('handleBroadcast', function() {
         $rootScope.image = imageService.image;
         $rootScope.imageClicked = true;
-        
     });  
     
     

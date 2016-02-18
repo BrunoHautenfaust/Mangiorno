@@ -6,7 +6,7 @@
         <ul>
             <li id="item" ng-repeat="rec in recipes | filter:{ingredients: search} | limitTo: limit as results">
                 <a ui-sref="itemDetails({itemId: rec.id})" ng-click="getItem(this)" class="title">{{rec.name}}</a></br>
-                <img class="imageSmall" ng-src="{{rec.img._url}}" ng-click="handleClick(this)" alt="{{rec.name}}" >
+                <img class="imageSmall" ng-src="{{rec.img._url}}" ng-click="handleClick(this)" alt="{{rec.name}}" onerror="imgError(this)">
           
                 <div class="info">
                     <p id="multiline" class="instr"><span>Instructions:</span></br> {{rec.instructions}}</p></br>

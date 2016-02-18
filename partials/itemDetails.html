@@ -1,7 +1,7 @@
 <div class="itemDetails" id="dots-pattern">
     <h3>{{item.name}}<hr></h3>
     
-    <img ng-click="handleClick(this)" ng-src="{{item.img}}" alt="{{item.name}}" >
+    <img ng-click="handleClick(this)" ng-src="{{item.img}}" alt="{{item.name}}" onerror="imgError(this)">
     <div class="right">
         <p><span>Ingredients:</span> {{item.ingredients}}</p>
         <p><span>Instructions:</span><br> {{item.instructions}}</p>

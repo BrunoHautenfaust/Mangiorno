@@ -1,5 +1,5 @@
 myApp.controller('addController', ['$state','$rootScope', '$scope', '$timeout', function($state, $rootScope, $scope, $timeout) {
-     
+    
     var Relocate = function() {
         if (!$rootScope.userLoggedIn) {
             $state.go('home');
@@ -38,13 +38,14 @@ myApp.controller('addController', ['$state','$rootScope', '$scope', '$timeout', 
         r.set('name', m.name);
         r.set('instructions', m.instructions);
         var f = new Parse.File(m.name, { base64: m.img });
-        if (f._source.base64 == undefined) {
-            f._source.base64 = emptyDishImg;
-        }
+       /* if (f._source.base64 == undefined) {
+            f._source.base64 = 
+        }*/
         r.set('img', f);
         var a = MakeArray(m.ingredients);
         r.set('ingredients', a);
         
+       // console.log(f);
         checkRecipe(r);
         /*
         console.log(r.get('name'));
